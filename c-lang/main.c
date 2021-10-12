@@ -2,7 +2,7 @@
 
 #include <stdio.h>
 
-void main () {
+int main () {
    char str1[90], str2[30];
 
    printf("Enter name: ");
@@ -14,4 +14,5 @@ void main () {
    printf("Entered Name: %s", str1);
    printf("\nEntered Website:%s", str2);
    
+   return(0);
 }

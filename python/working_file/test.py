@@ -7,4 +7,9 @@
 '''
 checknumber = lambda x: True if str(x).isnumeric() else False
 print(f"Check number : {checknumber('123')}")'''
-print(int(input(': ')))
+
+
+def f(x):
+    return x**2
+
+print(f(4))
