@@ -1,13 +1,27 @@
-#include<stdio.h>
-int main()
-{
-    // a = 5(00000101), b = 9(00001001)
-    unsigned char a = 5, b = 9;
+#include <stdio.h>
+#include <stdlib.h>
  
-    // The result is 00001010
-    printf("a<<1 = %d\n", a<<1);
-   
-    // The result is 00010010
-    printf("b<<1 = %d\n", b<<1); 
+int main(void)
+{
+    int arr1[40], arr2[40];
+
+    for(int i = 0; i < 40; i++){
+        int randNum = (rand() % 50) + 50;
+        arr1[i] = randNum ;
+    }
+
+    for(int i = 0; i < 40; i++){
+        int randNum = (rand() % 50) + 50;
+        arr2[i] = randNum ;
+    }
+
+    for (int index = 0; index < 40; index++)
+        printf("%d : %d ",index+1,arr1[index]);
+
+    printf("\n");
+
+    for (int index = 0; index < 40; index++)
+        printf("%d : %d ",index+1,arr2[index]);
+
     return 0;
 }
