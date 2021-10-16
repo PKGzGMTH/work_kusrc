@@ -4,7 +4,6 @@
 int main(void)
 {
     int arr1[40], arr2[40];
-
     for(int i = 0; i < 40; i++){
         int randNum = (rand() % 50) + 50;
         arr1[i] = randNum ;
