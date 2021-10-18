@@ -8,8 +8,14 @@
 checknumber = lambda x: True if str(x).isnumeric() else False
 print(f"Check number : {checknumber('123')}")'''
 
+x = [1,2,3,4,4,5,6,7,7,7,8,8,9,7,10]
+y = []
 
-def f(x):
-    return x**2
-
-print(f(4))
+for i in range(15):
+    for j in range(15):
+        if i == j:
+            continue
+        elif x[i] == x[j]:
+            if x[i] not in y:
+                y.append(x[i])
+                print(x[i])
