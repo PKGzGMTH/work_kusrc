@@ -1,4 +1,4 @@
-// To complie this file type: gcc main.c -o <filename>
+// use command: gcc .\work_kusrc\c-lang\main.c -o .\work_kusrc\c-lang\main ; .\work_kusrc\c-lang\main.exe
 
 #include <stdio.h>
 
