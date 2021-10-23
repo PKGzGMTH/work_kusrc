@@ -1,15 +1,10 @@
-import matplotlib
-import matplotlib.pyplot as plt
-import numpy as np
-import matplotlib.image as mpimg
+import os
+import sys
+import argparse
+import platform
 
-MyArray = np.array([[0,0,0,0,1,0,0,0,0],
-                    [0,0,1,1,1,1,1,0,0],
-                    [0,0,1,0,1,0,1,0,0],
-                    [0,0,1,1,1,1,1,0,0],
-                    [0,0,0,1,0,1,0,0,0],
-                    [0,0,0,1,0,1,0,0,0]])
-
-print(MyArray)
-plt.imshow(MyArray)
-plt.show()
+system_type = platform.system()
+python_version = platform.python_version()
+m, s, _ = python_version.split('.')
+path = f'{os.path.dirname(os.path.abspath(__file__))}/{system_type.lower()}/{m}{s}'
+print(os.path.exists(path))
