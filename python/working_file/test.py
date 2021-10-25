@@ -8,34 +8,22 @@
 checknumber = lambda x: True if str(x).isnumeric() else False
 print(f"Check number : {checknumber('123')}")'''
 
-import serial, time, numpy as np, matplotlib.pyplot as plt
-from matplotlib.pyplot import figure, draw, pause
-baudrate = 115200
+import serial, time, numpy as np, matplotlib.pyplot as plt, matplotlib.animation as animation
+baudrate = 921600
 port = 'COM4'  # set the correct port before run it
-count = 0
-
-myserial = serial.Serial(port=port, baudrate=baudrate)
-myserial.timeout = 2  # set read timeout
-# print z1serial  # debug serial.
-print (myserial.is_open)  # True for opened
-if myserial.is_open:
+list = []
+ser = serial.Serial(port=port, baudrate=baudrate)
+ser.timeout = 2
+if ser.is_open:
+    while ord(ser.read()) != 0:
+        continue
     while True:
-        read = False
-        data = []
-        index = 0
-        size = myserial.inWaiting()
-        if size:
-            try:
-                #print('finish')
-                receivedata = myserial.read(size).decode('utf-8')
-                print(receivedata)
-                print('finish')
-
-            except:
-                continue
-            
+        readByte = ord(ser.read())
+        if readByte == 0: break
         else:
-            continue
-        time.sleep(1)
+            list.append(int(readByte))
+    print(list)
+    print(len(list))
+
 else:
     print ('serial not open')
