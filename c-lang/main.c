@@ -1,18 +1,12 @@
 // use command: gcc .\work_kusrc\c-lang\main.c -o .\work_kusrc\c-lang\main ; .\work_kusrc\c-lang\main.exe
 
 #include <stdio.h>
+char stdName[30] = "Pongsakorn Tippayasomdech", faculty[20] = "Computer Science", stdCode[10] = "6430200850" ;
+int stdAge = 19;
+float gpa = 3.21;
 
-int main () {
-   char str1[90], str2[30];
-
-   printf("Enter name: ");
-   scanf("%s", str1);
-
-   printf("Enter your website name: ");
-   scanf("%s", str2);
-
-   printf("Entered Name: %s", str1);
-   printf("\nEntered Website:%s", str2);
-   
-   return(0);
+void main (void) {
+   printf("My name is %s and student id is %s\n", stdName, stdCode);
+   printf("I am %d year old and study %s\n", stdAge, faculty);
+   printf("My GPA is %.2f", gpa);
 }
