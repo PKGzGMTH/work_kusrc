@@ -6,11 +6,11 @@
 #    By: ptippaya <ptippaya@student.42bangkok.co    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/18 13:36:14 by ptippaya          #+#    #+#              #
-#    Updated: 2022/02/20 18:57:24 by ptippaya         ###   ########.fr        #
+#    Updated: 2022/02/26 19:46:06 by ptippaya         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CXX = g++
+CXX = c++
 CXXFLAG = -Wall -Wextra -Werror
 # CPPFILE = $(shell find . -type f -name "*.cpp")
 CPPFILE = main.cpp
@@ -28,6 +28,7 @@ all: clean
 	@rm $(OUTPUT)
 
 %:
+	@clear
 	@printf '-------------------- FILE --------------------\n\n'
 	@printf 'CPP File : $@.cpp\n'
 	@printf '\n-------------------- CPP! --------------------\n\n'
